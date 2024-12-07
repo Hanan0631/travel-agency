@@ -1,0 +1,30 @@
+.header {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: #00000029;
+}
+
+.header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 70px;
+}
+
+.header ul {
+  display: flex;
+  gap: 40px;
+  list-style-type: none;
+}
+
+.header ul li {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #282828;
+  cursor: pointer;
+}

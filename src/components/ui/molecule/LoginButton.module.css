@@ -1,0 +1,20 @@
+.loginButton {
+  /* width: 166px; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 4px;
+  background-color: none;
+  padding: 8px 16px;
+  border: 2px solid #28a745;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.loginButton p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #28a745;
+  word-spacing: 5px;
+}

@@ -1,5 +1,6 @@
 import { yekan } from "@/utils/fonts";
 import "./globals.css";
+import Layout from "@/layout/Layout";
 
 export const metadata = {
   title: "آژانس مسافرتی | تورینو",
@@ -11,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fa" dir="rtl" suppressHydrationWarning={true}>
       <body className={yekan.className} suppressHydrationWarning={true}>
-        {children}
+        <Layout>{children}</Layout>
       </body>
     </html>
   );
