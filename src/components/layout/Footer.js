@@ -33,7 +33,7 @@ function Footer() {
         </div>
         <div className={styles.left}>
           <Logo />
-            <p>تلفن پشتیبانی: 8574-021</p>
+          <p>تلفن پشتیبانی: 8574-021</p>
           <div>
             <Image src={aira} width={68} height={74} alt="aira" />
             <Image src={ecunion} width={68} height={74} alt="ecunion" />

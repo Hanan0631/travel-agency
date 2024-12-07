@@ -1,0 +1,20 @@
+.search {
+  display: flex;
+  gap: 120px;
+  padding: 15px 0 15px 10px;
+  margin-top: 30px;
+  border: 1px solid #00000026;
+  border-radius: 20px;
+}
+
+.search button {
+  width: 190px;
+  background-color: #28a745;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 8px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+}
