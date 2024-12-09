@@ -1,0 +1,32 @@
+.navbarContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF90;
+  backdrop-filter: blur(3px);
+}
+
+.navbar {
+  height: 100vh;
+  width: 50%;
+  background-color: #ffffff;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  padding: 32px 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar a {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar a:first-child {
+    color: #28A745;
+    ;
+}

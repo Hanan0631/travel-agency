@@ -1,4 +1,10 @@
-import {yekan}  from "@/utils/fonts";
+//components
+import Layout from "@/partials/layouts/Layout";
+
+//core
+import { yekan } from "@/utils/fonts";
+
+//styles
 import "./globals.css";
 
 export const metadata = {
@@ -9,8 +15,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fa" dir="rtl">
-      <body className={yekan.className}>{children}</body>
+    <html lang="fa" dir="rtl" suppressHydrationWarning={true}>
+      <body className={yekan.className} suppressHydrationWarning={true}>
+        <Layout>{children}</Layout>
+      </body>
     </html>
   );
 }

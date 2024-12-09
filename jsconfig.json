@@ -6,6 +6,7 @@
       "@/app/*": ["src/app/*"],
       "@/partials/*": ["src/components/partials/*"],
       "@/template/*": ["src/components/template/*"],
+      "@/ui/*": ["src/components/ui/*"],
       "@/config/*": ["src/core/config/*"],
       "@/services/*": ["src/core/services/*"],
       "@/utils/*": ["src/core/utils/*"],
