@@ -3,15 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.62.3",
+    "axios": "^1.7.9",
+    "next": "14.2.20",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.20"
+    "react-hot-toast": "^2.4.1",
+    "react-loader-spinner": "^6.1.6",
+    "react18-input-otp": "^1.1.4"
   },
   "devDependencies": {
     "eslint": "^8",
