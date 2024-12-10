@@ -8,7 +8,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 //public
-import logo from "@/public/images/logo.png"
+import logo from "@/public/images/logo.png";
 
 //components
 import SignInButton from "@/ui/atom/SignInButton";
@@ -18,33 +18,38 @@ import LoginButton from "@/ui/molecule/LoginButton";
 
 //styles
 import styles from "./Header.module.css";
-
+import Authentication from "src/components/templates/Authentication";
 
 function Header() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [navbarIsOpen, setNavbarIsOpen] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const ref = useRef();
 
   useEffect(() => {
     const closeNavbar = (event) => {
       if (!ref.current?.contains(event.target)) {
-        setIsOpen(false);
+        setNavbarIsOpen(false);
+        setModalIsOpen(false);
       }
     };
     document.addEventListener("click", closeNavbar);
-
+    
     return () => {
       document.removeEventListener("click", closeNavbar);
     };
-  });
+  }, [modalIsOpen]);
 
   return (
     <div className={styles.header}>
-      {isOpen && <Navbar reference={ref} />}
-      <div className={styles.mobileDesign} onClick={() => setIsOpen(true)}>
+      {navbarIsOpen && <Navbar reference={ref} />}
+      <div
+        className={styles.mobileDesign}
+        onClick={() => setNavbarIsOpen(true)}
+      >
         <MenuButton />
       </div>
-      <div className={styles.mobileDesign}>
+      <div className={styles.mobileDesign} onClick={() => setModalIsOpen(true)}>
         <SignInButton />
       </div>
       <div className={styles.desktopDesign}>
@@ -56,9 +61,19 @@ function Header() {
           <Link href="/">تماس با ما</Link>
         </ul>
       </div>
-      <Link className={styles.desktopDesign} href="/send-otp">
+      <div
+        className={styles.desktopDesign}
+        onClick={() => setModalIsOpen(true)}
+      >
         <LoginButton />
-      </Link>
+      </div>
+      {modalIsOpen && (
+        <Authentication
+          modalIsOpen={modalIsOpen}
+          setModalIsOpen={setModalIsOpen}
+          reference={ref}
+        />
+      )}
     </div>
   );
 }
