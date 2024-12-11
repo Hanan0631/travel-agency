@@ -40,7 +40,6 @@ function SendOTPForm({
           toast.success(data?.data.message);
           toast(data?.data.code);
           setStep(2);
-          setMobile("");
         },
         onError: (error) => {
           toast.error("مشکلی پیش آمده دوباره امتحان کنید!");
