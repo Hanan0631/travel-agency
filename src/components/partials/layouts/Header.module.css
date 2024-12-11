@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px;
+  padding: 10px 30px;
 }
 
 .header div {
@@ -25,7 +25,6 @@
 
   .header {
     max-width: 1200px;
-    padding: 20px 30px;
     margin: 0 auto;
     background-color: #ffffff;
     box-shadow: #00000029;
@@ -35,17 +34,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
   }
 
   .header ul {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     list-style-type: none;
   }
 
   .header ul li {
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: 400;
     color: #282828;
     cursor: pointer;

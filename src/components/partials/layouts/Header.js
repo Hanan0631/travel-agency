@@ -31,23 +31,21 @@ function Header() {
   const ref = useRef();
 
   const { data, isPending } = useGetUserProfile();
-  console.log(data);
-
   const mobile = data?.data.mobile;
 
   useEffect(() => {
-    const closeNavbar = (event) => {
+    const close = (event) => {
       if (!ref.current?.contains(event.target)) {
         setNavbarIsOpen(false);
         setModalIsOpen(false);
       }
     };
-    document.addEventListener("click", closeNavbar);
+    document.addEventListener("click", close);
 
     return () => {
-      document.removeEventListener("click", closeNavbar);
+      document.removeEventListener("click", close);
     };
-  }, [modalIsOpen]);
+  }, [modalIsOpen, navbarIsOpen]);
 
   return (
     <>
