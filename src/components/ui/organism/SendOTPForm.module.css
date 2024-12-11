@@ -13,6 +13,7 @@
 .sendOTP span {
   display: block;
   text-align: left;
+  cursor: pointer;
 }
 
 .sendOTP h4 {

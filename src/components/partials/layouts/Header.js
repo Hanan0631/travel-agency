@@ -34,38 +34,43 @@ function Header() {
       }
     };
     document.addEventListener("click", closeNavbar);
-    
+
     return () => {
       document.removeEventListener("click", closeNavbar);
     };
   }, [modalIsOpen]);
 
   return (
-    <div className={styles.header}>
-      {navbarIsOpen && <Navbar reference={ref} />}
-      <div
-        className={styles.mobileDesign}
-        onClick={() => setNavbarIsOpen(true)}
-      >
-        <MenuButton />
-      </div>
-      <div className={styles.mobileDesign} onClick={() => setModalIsOpen(true)}>
-        <SignInButton />
-      </div>
-      <div className={styles.desktopDesign}>
-        <Image src={logo} width={146} height={44} alt="Logo" />
-        <ul>
-          <Link href="/">صفحه اصلی</Link>
-          <Link href="/">خدمات گردشگری</Link>
-          <Link href="/">درباره ما</Link>
-          <Link href="/">تماس با ما</Link>
-        </ul>
-      </div>
-      <div
-        className={styles.desktopDesign}
-        onClick={() => setModalIsOpen(true)}
-      >
-        <LoginButton />
+    <>
+      <div className={styles.header}>
+        {navbarIsOpen && <Navbar reference={ref} />}
+        <div
+          className={styles.mobileDesign}
+          onClick={() => setNavbarIsOpen(true)}
+        >
+          <MenuButton />
+        </div>
+        <div
+          className={styles.mobileDesign}
+          onClick={() => setModalIsOpen(true)}
+        >
+          <SignInButton />
+        </div>
+        <div className={styles.desktopDesign}>
+          <Image src={logo} width={146} height={44} alt="Logo" />
+          <ul>
+            <Link href="/">صفحه اصلی</Link>
+            <Link href="/">خدمات گردشگری</Link>
+            <Link href="/">درباره ما</Link>
+            <Link href="/">تماس با ما</Link>
+          </ul>
+        </div>
+        <div
+          className={styles.desktopDesign}
+          onClick={() => setModalIsOpen(true)}
+        >
+          <LoginButton />
+        </div>
       </div>
       {modalIsOpen && (
         <Authentication
@@ -74,7 +79,7 @@ function Header() {
           reference={ref}
         />
       )}
-    </div>
+    </>
   );
 }
 
