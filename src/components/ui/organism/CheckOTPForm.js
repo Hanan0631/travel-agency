@@ -1,4 +1,5 @@
 "use client";
+
 //react-input-otp
 import OtpInput from "react18-input-otp";
 
@@ -7,6 +8,9 @@ import toast from "react-hot-toast";
 
 //react-count-down
 import Countdown from "react-countdown";
+
+//tanstack
+import { useQueryClient } from "@tanstack/react-query";
 
 //react
 import { useState } from "react";
@@ -27,6 +31,8 @@ function CheckOTPForm({ mobile, setStep, setModalIsOpen, reference }) {
 
   const { isPending, mutate } = useCheckOtp();
 
+  const queryClient = useQueryClient();
+
   const checkOTPHandler = (e) => {
     e.preventDefault();
 
@@ -37,6 +43,7 @@ function CheckOTPForm({ mobile, setStep, setModalIsOpen, reference }) {
           setCookie("accessToken", data?.data.accessToken, 30);
           setCookie("refreshToken", data?.data.refreshToken, 365);
           setModalIsOpen(false);
+          queryClient.invalidateQueries({ queryKey: ["profile"] });
           setStep(1);
         },
         onError: (error) => {
