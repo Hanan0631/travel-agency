@@ -1,4 +1,7 @@
+//components
 import OriginButtonGray from "../atom/OriginButtonGray"
+
+//styles
 import styles from "./SearchItemDesktopDesign.module.css"
 
 function OriginDesktopDesign() {

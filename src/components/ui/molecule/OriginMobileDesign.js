@@ -1,4 +1,7 @@
+//components
 import OriginButton from "../atom/OriginButton";
+
+//styles
 import styles from "./SearchItemMobileDesign.module.css"
 
 function OriginMobileDesign() {

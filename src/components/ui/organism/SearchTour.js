@@ -1,9 +1,12 @@
+//components
 import CalendarDesktopDesign from "../molecule/CalendarDesktopDesign";
 import CalendarMobileDesign from "../molecule/CalendarMobileDesign";
 import DestinationDesktopDesign from "../molecule/DestinationDesktopDesign";
 import DestinationMobileDesign from "../molecule/DestinationMobileDesign";
 import OriginDesktopDesign from "../molecule/OriginDesktopDesign";
 import OriginMobileDesign from "../molecule/OriginMobileDesign";
+
+//styles
 import styles from "./SearchTour.module.css";
 
 function SearchTour() {

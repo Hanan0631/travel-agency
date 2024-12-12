@@ -1,4 +1,7 @@
+//components
 import DestinationButtonGray from "../atom/DestinationButtonGray";
+
+//styles
 import styles from "./SearchItemDesktopDesign.module.css";
 
 function DestinationDesktopDesign() {

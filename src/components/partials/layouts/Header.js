@@ -17,6 +17,7 @@ import Navbar from "@/ui/organism/Navbar";
 import LoginButton from "@/ui/molecule/LoginButton";
 import Authentication from "src/components/templates/Authentication";
 import UserProfile from "@/ui/molecule/UserProfile";
+import ProfileInformation from "@/ui/organism/ProfileInformation";
 
 //core
 import { useGetUserProfile } from "@/services/queries";
@@ -27,6 +28,7 @@ import styles from "./Header.module.css";
 function Header() {
   const [navbarIsOpen, setNavbarIsOpen] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [profileIsOpen, setProfileIsOpen] = useState(false);
 
   const ref = useRef();
 
@@ -59,7 +61,22 @@ function Header() {
         </div>
         <div className={styles.mobileDesign}>
           {mobile && !isPending ? (
-            <UserProfile mobile={mobile} />
+            <div className={styles.profileDetails}>
+              <div
+                onClick={() =>
+                  setProfileIsOpen((profileIsOpen) => !profileIsOpen)
+                }
+              >
+                <UserProfile mobile={mobile} />
+              </div>
+
+              {profileIsOpen && (
+                <ProfileInformation
+                  mobile={mobile}
+                  setProfileIsOpen={setProfileIsOpen}
+                />
+              )}
+            </div>
           ) : (
             <div onClick={() => setModalIsOpen(true)}>
               <SignInButton />
@@ -77,7 +94,19 @@ function Header() {
         </div>
         <div className={styles.desktopDesign}>
           {data && !isPending ? (
-            <UserProfile mobile={mobile} />
+            <div className={styles.profileDetails}>
+              <div
+                onClick={() =>
+                  setProfileIsOpen((profileIsOpen) => !profileIsOpen)
+                }
+              >
+                <UserProfile
+                  mobile={mobile}
+                  setProfileIsOpen={setProfileIsOpen}
+                />
+              </div>
+              {profileIsOpen && <ProfileInformation mobile={mobile} />}
+            </div>
           ) : (
             <div onClick={() => setModalIsOpen(true)}>
               <LoginButton />

@@ -1,4 +1,7 @@
+//components
 import CalendarButton from "../atom/CalendarButton";
+
+//styles
 import styles from "./SearchItemMobileDesign.module.css"
 
 function CalendarMobileDesign() {
