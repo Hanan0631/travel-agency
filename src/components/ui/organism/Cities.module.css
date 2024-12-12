@@ -1,0 +1,36 @@
+.cities {
+  width: 100%;
+  margin-top: 5px;
+  border: 1px solid #00000033;
+  border-radius: 11px;
+}
+
+.cities > p {
+  font-size: 0.8rem;
+  color: #282828b2;
+  background: #f8f8f8;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+  padding: 8px;
+}
+
+.cities div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-top: 1px solid #0000001f;
+}
+
+.cities div:last-child {
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 11px;
+}
+
+@media (min-width: 769px) {
+  .cities {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -8,6 +8,10 @@
   display: none;
 }
 
+.desktopDesignSearch div {
+  display: flex;
+}
+
 .desktopDesignSearch button {
   width: 180px;
   background-color: #28a745;
@@ -28,13 +32,14 @@
   margin-top: 30px;
 }
 
-.mobileDesignSearch div {
-  display: flex;
+.mobileDesignSearch > div:first-child {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 15px;
 }
 
 .mobileDesignSearch button {
-  background-color: #28A745;
+  background-color: #28a745;
   color: #ffffff;
   font-size: 1.3rem;
   border: none;
@@ -44,6 +49,14 @@
   cursor: pointer;
 }
 
+.open {
+  display: block;
+}
+
+.close {
+  display: none;
+}
+
 @media (min-width: 769px) {
   .mobileDesignSearch {
     display: none;
@@ -51,5 +64,9 @@
 
   .desktopDesignSearch {
     display: flex;
+  }
+
+  .origin {
+    margin-left: 515px;
   }
 }

@@ -8,4 +8,11 @@ const useGetUserProfile = () => {
   return useQuery({ queryKey, queryFn });
 };
 
-export { useGetUserProfile };
+const useGetTour = () => {
+  const queryKey = ["tour"];
+  const queryFn = () => api.get("tour");
+
+  return useQuery({ queryKey, queryFn });
+}
+
+export { useGetUserProfile, useGetTour };
