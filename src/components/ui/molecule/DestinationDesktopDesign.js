@@ -1,13 +1,13 @@
 //components
-import DestinationButtonGray from "../atom/DestinationButtonGray";
+import DestinationButton from "../atom/DestinationButton";
 
 //styles
 import styles from "./SearchItemDesktopDesign.module.css";
 
 function DestinationDesktopDesign() {
   return (
-    <div className={styles.buttons}>
-      <DestinationButtonGray />
+    <div className={styles.searchItem}>
+      <DestinationButton />
       <p>مقصد</p>
     </div>
   );

@@ -1,13 +1,13 @@
 //components
-import OriginButton from "../atom/OriginButton";
+import OriginButtonGray from "../atom/OriginButtonGray";
 
 //styles
-import styles from "./SearchItemMobileDesign.module.css"
+import styles from "./SearchItemMobileDesign.module.css";
 
 function OriginMobileDesign() {
   return (
-    <div className={styles.searchItem} style={{border: "none"}}>
-      <OriginButton />
+    <div className={styles.buttons}>
+      <OriginButtonGray />
       <p>مبدا</p>
     </div>
   );

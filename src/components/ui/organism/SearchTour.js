@@ -1,5 +1,8 @@
 "use client";
 
+//react
+import { useState } from "react";
+
 //components
 import CalendarDesktopDesign from "../molecule/CalendarDesktopDesign";
 import CalendarMobileDesign from "../molecule/CalendarMobileDesign";
@@ -11,7 +14,6 @@ import OriginCities from "./OriginCities";
 
 //styles
 import styles from "./SearchTour.module.css";
-import { useState } from "react";
 
 // import { useGetTour } from "@/services/queries";
 
@@ -32,31 +34,6 @@ function SearchTour() {
 
   return (
     <>
-      <div className={styles.desktopDesignSearch}>
-        <div
-          onClick={() =>
-            setSelectOriginDesktop(
-              (selectOriginDesktop) => !selectOriginDesktop
-            )
-          }
-        >
-          <OriginMobileDesign />
-        </div>
-        <div>
-          <DestinationMobileDesign />
-        </div>
-        <div>
-          <CalendarMobileDesign />
-        </div>
-        <button>جستجو</button>
-      </div>
-      <div
-        className={`${styles.origin} ${
-          selectOriginDesktop ? styles.open : styles.close
-        }`}
-      >
-        <OriginCities />
-      </div>
       <div className={styles.mobileDesignSearch}>
         <div>
           <div>
@@ -67,20 +44,45 @@ function SearchTour() {
                 )
               }
             >
-              <OriginDesktopDesign />
+              <OriginMobileDesign />
             </div>
             <div className={selectOriginMobile ? styles.open : styles.close}>
               <OriginCities />
             </div>
           </div>
           <div>
-            <DestinationDesktopDesign />
+            <DestinationMobileDesign />
           </div>
+        </div>
+        <div>
+          <CalendarMobileDesign />
+        </div>
+        <button>جستجو</button>
+      </div>
+      <div className={styles.desktopDesignSearch}>
+        <div
+          onClick={() =>
+            setSelectOriginDesktop(
+              (selectOriginDesktop) => !selectOriginDesktop
+            )
+          }
+        >
+          <OriginDesktopDesign />
+        </div>
+        <div>
+          <DestinationDesktopDesign />
         </div>
         <div>
           <CalendarDesktopDesign />
         </div>
         <button>جستجو</button>
+      </div>
+      <div
+        className={`${styles.origin} ${
+          selectOriginDesktop ? styles.open : styles.close
+        }`}
+      >
+        <OriginCities />
       </div>
     </>
   );

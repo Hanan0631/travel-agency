@@ -1,14 +1,15 @@
-.buttons {
-  width: 100%;
+.searchItem {
+  height: 100%;
   display: flex;
-  justify-content: center;
+  align-items: center;
   gap: 8px;
-  border: 1px solid #00000026;
-  border-radius: 12px;
-  padding: 8px;
+  padding: 0px 12px;
+  border-right: 1px solid #00000033;
+  cursor: pointer;
 }
 
-.buttons p {
-    font-size: 1rem;
-    color: #00000080;
+.searchItem p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #2c2c2c;
 }

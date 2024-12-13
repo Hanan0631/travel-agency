@@ -1,16 +1,16 @@
 //components
-import DestinationButton from "../atom/DestinationButton"
+import DestinationButtonGray from "../atom/DestinationButtonGray";
 
 //styles
-import styles from "./SearchItemMobileDesign.module.css"
+import styles from "./SearchItemMobileDesign.module.css";
 
 function DestinationMobileDesign() {
   return (
-    <div className={styles.searchItem}>
-      <DestinationButton />
+    <div className={styles.buttons}>
+      <DestinationButtonGray />
       <p>مقصد</p>
     </div>
-  )
+  );
 }
 
-export default DestinationMobileDesign
+export default DestinationMobileDesign;
