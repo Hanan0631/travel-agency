@@ -2,6 +2,7 @@ import Image from "next/image";
 import banner from "@/public/images/banner.png";
 import styles from "./HomePage.module.css"
 import SearchTour from "@/ui/organism/SearchTour";
+import AllTours from "./AllTours";
 
 function HomePage() {
   return (
@@ -17,6 +18,7 @@ function HomePage() {
         <span>تورینو</span> برگزار کننده بهترین تور های داخلی و خارجی
       </h2>
       <SearchTour />
+      <AllTours />
     </div>
   );
 }

@@ -1,0 +1,44 @@
+.tours {
+  margin: 50px auto;
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tours ul {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+}
+
+
+.tours ul li:nth-child(n + 5) {
+  display: none;
+}
+
+.tours h3 {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+@media (min-width: 769px) {
+  .tours ul {
+    max-width: 1200px;
+    margin-top: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .tours ul li:nth-child(n+5) {
+    display: block;
+  }
+
+  .tours .more {
+    display: none;
+  }
+}

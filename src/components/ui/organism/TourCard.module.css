@@ -1,0 +1,72 @@
+.card {
+  max-width: 327.44px;
+  border: 1px solid #0000001f;
+  border-radius: 10px;
+}
+
+.card img {
+    max-width: 327.44;
+    height: auto;
+}
+
+.card .details {
+  padding: 0 10px 5px;
+  border-bottom: 1px solid #0000001f;
+}
+
+.card .details h3 {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.card .details p {
+  font-size: 0.9rem;
+  color: #282828b2;
+}
+
+.card .reservation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+}
+
+.card .reservation a {
+  width: 99px;
+  text-align: center;
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  background-color: #28a745;
+  color: #ffffff;
+}
+
+.card .reservation p {
+  color: #009eca;
+}
+
+.card .reservation span {
+  color: #282828cc;
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .card {
+    max-width: 278.44px;
+  }
+
+  .card .img {
+    width: 327.44;
+    height: auto;
+  }
+}
+
+@media (min-width: 1201px) {
+  .card {
+    max-width: 278.44px;
+  }
+  
+  .card .img {
+    width: 278.44px;
+    height: auto;
+  }
+}
