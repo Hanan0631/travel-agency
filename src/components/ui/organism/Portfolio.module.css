@@ -33,4 +33,12 @@
     .portfolio > div {
         gap: 10px;
     }
+
+    .portfolio h4 {
+        font-size: 1.1rem;
+    }
+
+    .portfolio p {
+        font-size: .9rem;
+    }
 }
