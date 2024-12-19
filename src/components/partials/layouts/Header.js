@@ -40,6 +40,7 @@ function Header() {
       if (!ref.current?.contains(event.target)) {
         setNavbarIsOpen(false);
         setModalIsOpen(false);
+        setProfileIsOpen(false)
       }
     };
     document.addEventListener("click", close);
@@ -47,7 +48,7 @@ function Header() {
     return () => {
       document.removeEventListener("click", close);
     };
-  }, [modalIsOpen, navbarIsOpen]);
+  }, [modalIsOpen, navbarIsOpen, profileIsOpen]);
 
   return (
     <>

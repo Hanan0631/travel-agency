@@ -1,0 +1,153 @@
+.phone {
+  width: 327px;
+  border: 1px solid #00000040;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.phone .description {
+  height: 128px;
+  background-color: #28a745;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: relative;
+}
+
+.phone .description h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.phone .description span {
+  font-weight: 600;
+  color: #10411b;
+}
+
+.phone .description p {
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.phone .description img {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+
+.phone .call {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+.phone .call div {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+}
+
+.phone .call p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #282828;
+}
+
+.phone .call button {
+  background: #10411b;
+  color: #ffffff;
+  font-size: 0.8rem;
+  border-radius: 9px;
+  padding: 8px 24px;
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .phone {
+    width: 700px;
+    margin: 20px 30px;
+    display: flex;
+    justify-content: stretch;
+  }
+
+  .phone .description {
+    display: flex;
+    align-items: flex-end;
+    gap: 50px;
+    padding-bottom: 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .phone .description div {
+    margin-bottom: 30px;
+  }
+
+  .phone .description h4 {
+    font-size: 2rem;
+  }
+
+  .phone .description p {
+    font-size: 1.2rem;
+  }
+
+  .phone .description img {
+    position: relative;
+  }
+
+  .phone .call {
+    flex-direction: column;
+    padding: 10px 40px;
+  }
+}
+
+@media (min-width: 1201px) {
+  .phone {
+    width: 1120px;
+    height: 200px;
+    margin: 20px 40px;
+    display: flex;
+  }
+
+  .phone .description {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    gap: 230px;
+    padding-bottom: 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .phone .description div {
+    margin-bottom: 50px;
+    padding-right: 50px;
+  }
+
+  .phone .description h4 {
+    font-size: 3.2rem;
+  }
+
+  .phone .description p {
+    font-size: 1.9rem;
+  }
+
+  .phone .description img {
+    position: relative;
+  }
+
+  .phone .call {
+    flex-direction: column;
+    padding: 30px 65px;
+  }
+
+  .phone .call p {
+    font-size: 1.6rem;
+  }
+
+  .phone .call button {
+    font-size: 1rem;
+    padding: 8px 20px;
+  }
+}

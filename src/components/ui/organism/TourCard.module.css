@@ -1,12 +1,15 @@
 .card {
-  max-width: 327.44px;
+  width: 327.44px;
   border: 1px solid #0000001f;
   border-radius: 10px;
+  position: unset !important;
 }
 
-.card img {
-    max-width: 327.44;
-    height: auto;
+.card .image {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
 }
 
 .card .details {
@@ -49,23 +52,12 @@
   color: #282828cc;
 }
 
-@media (min-width: 769px) and (max-width: 1200px) {
-  .card {
-    max-width: 278.44px;
-  }
-
-  .card .img {
-    width: 327.44;
-    height: auto;
-  }
-}
-
 @media (min-width: 1201px) {
   .card {
-    max-width: 278.44px;
+    width: 278.44px;
   }
   
-  .card .img {
+  .card .image {
     width: 278.44px;
     height: auto;
   }

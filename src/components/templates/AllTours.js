@@ -5,7 +5,6 @@ import SeeMore from "@/ui/molecule/SeeMore";
 async function AllTours() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}tour`);
   const data = await res.json();
-  console.log(data);
 
   return (
     <div className={styles.tours}>
@@ -17,7 +16,7 @@ async function AllTours() {
           </li>
         ))}
         <div className={styles.more}>
-          <SeeMore/>
+          <SeeMore />
         </div>
       </ul>
     </div>

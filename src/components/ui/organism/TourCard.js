@@ -9,10 +9,9 @@ function TourCard({ item }) {
     <div className={styles.card}>
       <Image
         src={item.image}
-        width={278.44}
-        height={159}
         alt={item.title}
-        // priority
+        layout="fill"
+        className={styles.image}
       />
       <div className={styles.details}>
         <h3>{item.title}</h3>

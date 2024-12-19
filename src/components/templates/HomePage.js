@@ -3,6 +3,9 @@ import banner from "@/public/images/banner.png";
 import styles from "./HomePage.module.css"
 import SearchTour from "@/ui/organism/SearchTour";
 import AllTours from "./AllTours";
+import PhoneShopping from "@/ui/organism/PhoneShopping";
+import TorinoSlider from "@/ui/organism/TorinoSlider";
+import Portfolio from "@/ui/organism/Portfolio";
 
 function HomePage() {
   return (
@@ -19,6 +22,9 @@ function HomePage() {
       </h2>
       <SearchTour />
       <AllTours />
+      <PhoneShopping />
+      <TorinoSlider />
+      <Portfolio />
     </div>
   );
 }
