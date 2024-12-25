@@ -14,14 +14,14 @@
 }
 
 .customNavigation {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .customNavigation button {
-    background-color: #ffffff;
-    border: none;
-    cursor: pointer;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.customNavigation button {
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
 }

@@ -1,0 +1,125 @@
+.accountInfoContainer {
+  border: 1px solid #00000033;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px 20px;
+}
+
+.accountInfoContainer h3 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.accountInfoContainer .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.accountInfoContainer .account {
+  margin-bottom: 30px;
+}
+
+.accountInfoContainer .info {
+  display: grid;
+  gap: 30px;
+}
+
+.accountInfoContainer .info > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accountInfoContainer .info .email {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.accountInfoContainer p {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.accountInfoContainer span {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #282828;
+  text-align: center;
+}
+
+.accountInfoContainer button {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: none;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.accountInfoContainer button p {
+  color: #009eca;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.accountInfoContainer form {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 8px;
+}
+
+.accountInfoContainer form input {
+  width: 100%;
+  border: 1px solid #00000080;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.accountInfoContainer form input:focus {
+  outline: none;
+}
+
+.accountInfoContainer form input[type="submit"] {
+  border: none;
+  background-color: #28a745;
+  height: 40px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+@media (min-width: 769px) {
+  .accountInfoContainer .info {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .accountInfoContainer .email {
+    justify-content: space-around;
+    width: 150px;
+  }
+
+  .accountInfoContainer .emailContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .accountInfoContainer .emailContainer button p {
+    width: auto;
+  }
+
+  .accountInfoContainer .info > div {
+    justify-content: flex-start;
+    /* gap: 30px; */
+  }
+
+  .accountInfoContainer .info p {
+    width: 100px;
+  }
+}

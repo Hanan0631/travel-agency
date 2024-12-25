@@ -13,8 +13,8 @@ import CalendarButtonGray from "../atom/CalendarButtonGray";
 //styles
 import styles from "./SearchItemMobileDesign.module.css";
 
-function CalendarMobileDesign() {
-  const [value, setValue] = useState();
+function CalendarMobileDesign({date, setDate}) {
+  // const [value, setValue] = useState();
   const datePickerRef = useRef();
 
   const datePickerStyle = {
@@ -34,7 +34,7 @@ function CalendarMobileDesign() {
     <div className={styles.buttons}>
       <DatePicker
         render={
-          value
+          date
             ? null
             : () => {
                 return (
@@ -51,8 +51,8 @@ function CalendarMobileDesign() {
         hideYear
         inputClass="custom-input"
         style={datePickerStyle}
-        value={value}
-        onChange={(e) => setValue(new Date(e))}
+        value={date}
+        onChange={(e) => setDate(new Date(e))}
         ref={datePickerRef}
         calendar={persian}
         locale={persian_fa}

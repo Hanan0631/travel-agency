@@ -4,11 +4,17 @@ import OriginButtonGray from "../atom/OriginButtonGray";
 //styles
 import styles from "./SearchItemMobileDesign.module.css";
 
-function OriginMobileDesign() {
+function OriginMobileDesign({ city }) {
   return (
     <div className={styles.buttons}>
-      <OriginButtonGray />
-      <p>مبدا</p>
+      {city ? (
+        <p>{city}</p>
+      ) : (
+        <>
+          <OriginButtonGray />
+          <p>مبدا</p>
+        </>
+      )}
     </div>
   );
 }

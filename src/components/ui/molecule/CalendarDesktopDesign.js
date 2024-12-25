@@ -5,7 +5,7 @@ import persian_fa from "react-date-object/locales/persian_fa";
 import "react-multi-date-picker/styles/colors/green.css";
 
 //react
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 //components
 import CalendarButton from "../atom/CalendarButton";
@@ -13,8 +13,8 @@ import CalendarButton from "../atom/CalendarButton";
 //styles
 import styles from "./SearchItemDesktopDesign.module.css";
 
-function CalendarDesktopDesign() {
-  const [value, setValue] = useState();
+function CalendarDesktopDesign({ date, setDate }) {
+  // const [value, setValue] = useState();
   const datePickerRef = useRef();
 
   const datePickerStyle = {
@@ -34,7 +34,7 @@ function CalendarDesktopDesign() {
     <div className={styles.searchItem}>
       <DatePicker
         render={
-          value
+          date
             ? null
             : () => {
                 return (
@@ -50,14 +50,14 @@ function CalendarDesktopDesign() {
         }
         hideYear
         style={datePickerStyle}
-        value={value}
-        onChange={(e) => setValue(new Date(e))}
+        value={date}
+        onChange={(e) => setDate(new Date(e))}
         ref={datePickerRef}
         calendar={persian}
         locale={persian_fa}
         calendarPosition="bottom-right"
         buttons={false}
-        className="green"
+        className="green custom-calendar"
       />
     </div>
   );

@@ -1,8 +1,13 @@
-import { e2p, sp } from "@/utils/replaceNumber";
-import styles from "./TourCard.module.css";
+//next
 import Image from "next/image";
 import Link from "next/link";
+
+//core
+import { sp } from "@/utils/replaceNumber";
 import { getMonth, tripDays, vehicles } from "@/utils/tourInfo";
+
+//styles
+import styles from "./TourCard.module.css";
 
 function TourCard({ item }) {
   return (
@@ -10,7 +15,8 @@ function TourCard({ item }) {
       <Image
         src={item.image}
         alt={item.title}
-        layout="fill"
+        fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         className={styles.image}
       />
       <div className={styles.details}>
@@ -22,7 +28,9 @@ function TourCard({ item }) {
       </div>
       <div className={styles.reservation}>
         <Link href="/cart">رزرو</Link>
-        <p>{sp(item.price)} <span>تومان</span></p>
+        <p>
+          {sp(item.price)} <span>تومان</span>
+        </p>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import Image from "next/image";
 import banner from "@/public/images/banner.png";
 import styles from "./HomePage.module.css"
 import SearchTour from "@/ui/organism/SearchTour";
-import AllTours from "./AllTours";
+import AllTours from "../ui/organism/AllTours";
 import PhoneShopping from "@/ui/organism/PhoneShopping";
 import TorinoSlider from "@/ui/organism/TorinoSlider";
 import Portfolio from "@/ui/organism/Portfolio";

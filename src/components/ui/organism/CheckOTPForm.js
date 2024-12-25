@@ -9,9 +9,6 @@ import toast from "react-hot-toast";
 //react-count-down
 import Countdown from "react-countdown";
 
-//tanstack
-import { useQueryClient } from "@tanstack/react-query";
-
 //react
 import { useState } from "react";
 
@@ -21,7 +18,6 @@ import Loader from "../atom/Loader";
 
 //core
 import { useCheckOtp } from "@/services/mutation";
-import { setCookie } from "@/utils/cookie";
 
 //styles
 import styles from "./CheckOTPForm.module.css";
@@ -31,22 +27,17 @@ function CheckOTPForm({ mobile, setStep, setModalIsOpen, reference }) {
 
   const { isPending, mutate } = useCheckOtp();
 
-  const queryClient = useQueryClient();
-
   const checkOTPHandler = (e) => {
     e.preventDefault();
 
     mutate(
       { mobile, code },
       {
-        onSuccess: (data) => {
-          setCookie("accessToken", data?.data.accessToken, 30);
-          setCookie("refreshToken", data?.data.refreshToken, 365);
+        onSuccess: () => {
           setModalIsOpen(false);
-          queryClient.invalidateQueries({ queryKey: ["profile"] });
           setStep(1);
         },
-        onError: (error) => {
+        onError: () => {
           toast.error("مشکلی پیش آمده دوباره امتحان کنید!");
         },
       }
@@ -63,6 +54,7 @@ function CheckOTPForm({ mobile, setStep, setModalIsOpen, reference }) {
         <label>کد تایید به شماره {mobile} ارسال شد</label>
         <div style={{ direction: "ltr" }}>
           <OtpInput
+            shouldAutoFocus
             value={code}
             onChange={(otp) => setCode(otp)}
             numInputs={6}

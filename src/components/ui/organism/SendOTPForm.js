@@ -57,6 +57,7 @@ function SendOTPForm({
       <form onSubmit={sendOTPHandler}>
         <label>شماره موبایل خود را وارد کنید</label>
         <input
+          autoFocus
           type="text"
           placeholder={`${e2p("4253")}***${e2p("0912")}`}
           value={mobile}

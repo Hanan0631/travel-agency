@@ -14,26 +14,42 @@ import OriginCities from "./OriginCities";
 
 //styles
 import styles from "./SearchTour.module.css";
-
-// import { useGetTour } from "@/services/queries";
+import { useGetTour } from "@/services/queries";
 
 function SearchTour() {
-  // const { data, isPending } = useGetTour();
-  // console.log(data?.data);
-
-  // const cities = [];
-
-  // data?.data.map((item) => {
-  //   if (!cities.includes(item.origin.name)) cities.push(item.origin.name);
-  // });
-
-  // console.log(cities)
+  const { data } = useGetTour();
 
   const [selectOriginMobile, setSelectOriginMobile] = useState(false);
   const [selectOriginDesktop, setSelectOriginDesktop] = useState(false);
+  const [city, setCity] = useState("");
+  const [date, setDate] = useState("");
 
+  const cities = [];
+  data?.data.filter((item) => {
+    if (!cities.includes(item.origin.persianName)) {
+      cities.push(item.origin.persianName);
+    }
+  });
+
+  console.log(cities);
+
+  const searchHandler = () => {
+    let newData = [];
+     data?.data.filter((item) => {
+      if (
+        item.origin.persianName === city &&
+        item.startDate.split("T")[0] ===
+          new Date(date).toISOString().split("T")[0]
+      )
+        newData.push(item);
+    });
+    console.log(newData);
+    console.log(new Date(date).toISOString().split("T")[0]);
+  };
+
+  console.log(city);
   return (
-    <>
+    <div className={styles.searchContainer}>
       <div className={styles.mobileDesignSearch}>
         <div>
           <div>
@@ -44,10 +60,19 @@ function SearchTour() {
                 )
               }
             >
-              <OriginMobileDesign />
+              <OriginMobileDesign city={city} />
             </div>
-            <div className={selectOriginMobile ? styles.open : styles.close}>
-              <OriginCities />
+            <div
+              className={`${styles.originCities} ${
+                selectOriginMobile ? styles.open : styles.close
+              }`}
+            >
+              <OriginCities
+                cities={cities}
+                setCity={setCity}
+                setSelectOriginDesktop={setSelectOriginDesktop}
+                setSelectOriginMobile={setSelectOriginMobile}
+              />
             </div>
           </div>
           <div>
@@ -55,9 +80,9 @@ function SearchTour() {
           </div>
         </div>
         <div>
-          <CalendarMobileDesign />
+          <CalendarMobileDesign setDate={setDate} date={date} />
         </div>
-        <button>جستجو</button>
+        <button onClick={searchHandler}>جستجو</button>
       </div>
       <div className={styles.desktopDesignSearch}>
         <div
@@ -67,24 +92,29 @@ function SearchTour() {
             )
           }
         >
-          <OriginDesktopDesign />
+          <OriginDesktopDesign city={city} />
         </div>
         <div>
           <DestinationDesktopDesign />
         </div>
         <div>
-          <CalendarDesktopDesign />
+          <CalendarDesktopDesign setDate={setDate} date={date} />
         </div>
-        <button>جستجو</button>
+        <button onClick={searchHandler}>جستجو</button>
       </div>
       <div
         className={`${styles.origin} ${
           selectOriginDesktop ? styles.open : styles.close
         }`}
       >
-        <OriginCities />
+        <OriginCities
+          cities={cities}
+          setCity={setCity}
+          setSelectOriginDesktop={setSelectOriginDesktop}
+          setSelectOriginMobile={setSelectOriginMobile}
+        />
       </div>
-    </>
+    </div>
   );
 }
 

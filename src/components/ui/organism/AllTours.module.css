@@ -7,7 +7,7 @@
 }
 
 .tours ul {
-  margin-top: 20px;
+  margin: 20px auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -16,6 +16,14 @@
 
 
 .tours ul li:nth-child(n + 5) {
+  display: none;
+}
+
+.show {
+  display: block !important;
+}
+
+.hide {
   display: none;
 }
 

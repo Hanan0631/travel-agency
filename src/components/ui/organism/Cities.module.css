@@ -18,8 +18,10 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  background-color: #ffffff;
   padding: 8px;
   border-top: 1px solid #0000001f;
+  cursor: pointer;
 }
 
 .cities div:last-child {
