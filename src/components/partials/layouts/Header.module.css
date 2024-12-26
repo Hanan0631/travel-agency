@@ -62,11 +62,11 @@
 
   .header ul {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     list-style-type: none;
   }
 
-  .header ul li {
+  .header ul a {
     font-size: 0.9rem;
     font-weight: 400;
     color: #282828;

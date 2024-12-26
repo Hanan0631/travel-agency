@@ -9,27 +9,27 @@ import { getMonth, tripDays, vehicles } from "@/utils/tourInfo";
 //styles
 import styles from "./TourCard.module.css";
 
-function TourCard({ item }) {
+function TourCard({ tour }) {
   return (
     <div className={styles.card}>
       <Image
-        src={item.image}
-        alt={item.title}
+        src={tour.image}
+        alt={tour.title}
         fill
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         className={styles.image}
       />
       <div className={styles.details}>
-        <h3>{item.title}</h3>
+        <h3>{tour.title}</h3>
         <p>
-          {getMonth(item.startDate)} . {tripDays(item.startDate, item.endDate)}
-          روزه -{vehicles(item.fleetVehicle)} - {item.options[1]} و ...
+          {getMonth(tour.startDate)} . {tripDays(tour.startDate, tour.endDate)}
+          روزه -{vehicles(tour.fleetVehicle)} - {tour.options[1]} و ...
         </p>
       </div>
       <div className={styles.reservation}>
         <Link href="/cart">رزرو</Link>
         <p>
-          {sp(item.price)} <span>تومان</span>
+          {sp(tour.price)} <span>تومان</span>
         </p>
       </div>
     </div>

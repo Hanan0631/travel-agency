@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-.tours ul {
+.tours main {
   margin: 20px auto;
   display: flex;
   flex-direction: column;
@@ -15,25 +15,26 @@
 }
 
 
-.tours ul li:nth-child(n + 5) {
+/* .tours ul li:nth-child(n + 5) {
   display: none;
-}
+} */
 
-.show {
+/* .show {
   display: block !important;
 }
 
 .hide {
   display: none;
-}
+} */
 
 .tours h3 {
   font-size: 1.3rem;
   font-weight: 300;
+  text-align: right;
 }
 
 @media (min-width: 769px) {
-  .tours ul {
+  .tours main {
     max-width: 1200px;
     margin-top: 20px;
     flex-direction: row;
@@ -42,11 +43,11 @@
     justify-content: center;
   }
 
-  .tours ul li:nth-child(n+5) {
+  /* .tours main li:nth-child(n+5) {
     display: block;
-  }
+  } */
 
-  .tours .more {
+  /* .tours .more {
     display: none;
-  }
+  } */
 }
