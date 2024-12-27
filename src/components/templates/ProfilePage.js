@@ -7,7 +7,6 @@ import BankAccountInfo from "@/ui/organism/BankAccountInfo";
 
 function ProfilePage() {
   const { data } = useGetUserProfile();
-  console.log(data);
 
   return (
     <div>

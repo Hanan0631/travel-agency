@@ -2,7 +2,7 @@
   margin-bottom: 20px;
 }
 
-.editInfo form {
+.editInfo .personalInfo {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -40,10 +40,10 @@
   outline: none;
 }
 
-
 .editInfo .buttons {
   display: flex;
   gap: 8px;
+  margin-top: 10px;
 }
 
 .editInfo input[type="button"] {
@@ -51,9 +51,11 @@
   background-color: #ffffff;
   color: #28a745;
   font-weight: 500;
+  cursor: pointer;
 }
 
-@media(min-width: 769px) {
+@media (min-width: 769px) {
+
   .editInfo form .inputs {
     flex-direction: row;
     flex-wrap: wrap;
@@ -72,7 +74,7 @@
 
   .editInfo form .buttons input {
     width: 144px;
-  } 
+  }
 
   .editInfo form .buttons {
     justify-content: flex-end;

@@ -1,0 +1,126 @@
+.tourCard {
+  position: relative;
+  border: 1px solid #00000033;
+  border-radius: 10px;
+  padding: 30px 20px 10px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tourCard .title,
+.tourCard .originAndDestination,
+.tourCard .end {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.tourCard .title h3,
+.tourCard .title p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.tourCard .originAndDestination span,
+.tourCard .end span {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #00000099;
+}
+
+.tourCard .status span {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px;
+  font-size: 0.5rem;
+  border-radius: 27px;
+}
+
+.tourCard .price {
+  border-top: 1px solid #00000033;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tourCard .price > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.tourCard .price .verticalLine {
+  width: 1px;
+  height: 30px;
+  background-color: #00000033;
+}
+
+.tourCard .price p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #00000080;
+}
+
+.tourCard .price span {
+  color: #282828;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.tourCard .price .amount {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #282828;
+}
+
+.tourCard .price .amount span {
+  font-size: 0.6rem;
+}
+
+.notStarted {
+  background-color: #d22b2b4d;
+  color: #d22b2b;
+}
+
+.finished {
+  background-color: #28a7454d;
+  color: #28a745;
+}
+
+.inProgress {
+  background-color: #d1b9004d;
+  color: #d1b900;
+}
+
+@media (min-width: 769px) {
+  .tourCard {
+    align-items: flex-start;
+    margin-top: 0;
+  }
+
+  .tourCard .tourTime {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+  }
+
+  .tourCard .title {
+    gap: 50px;
+  }
+
+  .tourCard .originAndDestination,
+  .tourCard .price ,
+  .tourCard .end {
+    gap: 10px;
+  }
+
+  .tourCard .price{
+    width: 100%;
+  }
+
+}

@@ -27,7 +27,7 @@ function TourCard({ tour }) {
         </p>
       </div>
       <div className={styles.reservation}>
-        <Link href="/cart">رزرو</Link>
+        <Link href={`/tours/${tour?.id}`}>رزرو</Link>
         <p>
           {sp(tour.price)} <span>تومان</span>
         </p>

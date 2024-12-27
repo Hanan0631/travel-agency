@@ -11,7 +11,6 @@ import styles from "./EditInfo.module.css";
 
 import "react-multi-date-picker/styles/colors/green.css";
 import DatePicker, { DateObject } from "react-multi-date-picker";
-import { dateToIso } from "@/utils/helper";
 
 function EditPersonalInfo({ setEdit, prevData }) {
   const { mutate, isPending } = useUpdatePersonalInfo();

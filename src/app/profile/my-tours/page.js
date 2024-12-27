@@ -1,7 +1,9 @@
+import UserToursPage from "src/components/templates/UserToursPage"
+
 function MyTours() {
   return (
     <div>
-      My tours
+     <UserToursPage />
     </div>
   )
 }

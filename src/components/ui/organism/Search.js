@@ -22,10 +22,11 @@ function Search() {
   useEffect(() => {
     const originId = getQuery("originId");
     const destinationId = getQuery("destinationId");
-    const startDate = getQuery("startDate")
-    const endDate = getQuery("endDate")
-    console.log({ originId, destinationId, startDate, endDate })
-    if (originId && destinationId && startDate && endDate) reset({ originId, destinationId, startDate, endDate });
+    const startDate = getQuery("startDate");
+    const endDate = getQuery("endDate");
+    console.log({ originId, destinationId, startDate, endDate });
+    if (originId && destinationId && startDate && endDate)
+      reset({ originId, destinationId, startDate, endDate });
   }, []);
 
   const submitHandler = (form) => {

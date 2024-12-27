@@ -1,0 +1,97 @@
+.checkoutContainer {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+
+.checkoutContainer .tourInfo {
+  border: 1px solid #0000001a;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.checkoutContainer .tourTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #00000080;
+}
+
+.checkoutContainer .tourTitle h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.checkoutContainer .tourTitle p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #28282880;
+}
+
+.checkoutContainer .finalPrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.checkoutContainer .finalPrice p:first-child {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #282828;
+}
+
+.checkoutContainer .finalPrice p:last-child {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #009eca;
+}
+
+.checkoutContainer .finalPrice span {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #282828cc;
+}
+
+.checkoutContainer .tourInfo button {
+  width: 100%;
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 8px;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+@media (min-width: 769px) {
+  .container {
+    background-color: #f3f3f3;
+    min-height: 500px;
+  }
+
+  .checkoutContainer {
+    margin: 0 auto;
+    padding: 20 30px;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .checkoutContainer .passengerInfo {
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0;
+    padding: 0 20px;
+    border-radius: 10px;
+  }
+
+  .checkoutContainer .tourInfo {
+    height: 240px;
+    background-color: #ffffff;
+    width: 50%;
+  }
+}

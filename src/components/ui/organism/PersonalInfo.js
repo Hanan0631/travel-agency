@@ -7,6 +7,7 @@ import EditPersonalInfo from "./EditPersonalInfo";
 
 //styles
 import styles from "./AccountInfo.module.css";
+import { e2p } from "@/utils/replaceNumber";
 
 function PersonalInfo({ data }) {
   const [edit, setEdit] = useState(false);
@@ -44,7 +45,7 @@ function PersonalInfo({ data }) {
             <div>
               <p>کدملی</p>
               {data?.data.nationalCode ? (
-                <span>{data?.data.nationalCode}</span>
+                <span>{e2p(data?.data.nationalCode)}</span>
               ) : (
                 <span>-</span>
               )}
@@ -52,7 +53,11 @@ function PersonalInfo({ data }) {
             <div>
               <p>جنسیت</p>
               {data?.data.gender ? (
-                <span>{data?.data.gender}</span>
+                data?.data.gender === "male" ? (
+                  <span>مرد</span>
+                ) : (
+                  <span>زن</span>
+                )
               ) : (
                 <span>-</span>
               )}

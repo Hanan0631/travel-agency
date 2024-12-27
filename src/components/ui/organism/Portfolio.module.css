@@ -1,9 +1,12 @@
 .portfolio {
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 40px;
+    margin: 0 auto;
     margin-bottom: 50px;
+    padding:0 40px;
 }
 
 .portfolio > div {

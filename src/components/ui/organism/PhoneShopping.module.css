@@ -2,7 +2,7 @@
   width: 327px;
   border: 1px solid #00000040;
   border-radius: 10px;
-  margin-top: 20px;
+  margin: 20px auto;
 }
 
 .phone .description {
@@ -66,7 +66,7 @@
 @media (min-width: 769px) and (max-width: 1200px) {
   .phone {
     width: 700px;
-    margin: 20px 30px;
+    margin: 20px auto;
     display: flex;
     justify-content: stretch;
   }
@@ -106,7 +106,7 @@
   .phone {
     width: 1120px;
     height: 200px;
-    margin: 20px 40px;
+    margin: 20px auto;
     display: flex;
   }
 
