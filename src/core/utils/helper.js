@@ -46,7 +46,6 @@ const calculateSpentTime = (start, end) => {
   const currentTime = Date.now();
   const startTourTime = new Date(start);
   const endTourTime = new Date(end);
-
   if (currentTime < startTourTime) return "شروع نشده";
   if (currentTime > endTourTime) return "به اتمام رسیده";
   if (startTourTime < currentTime < endTourTime) return "در حال برگزاری";

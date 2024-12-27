@@ -50,6 +50,7 @@ select:focus {
   padding: 5px;
   border-radius: 16px;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
 @media (min-width: 769px) {

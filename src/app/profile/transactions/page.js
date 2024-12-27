@@ -1,11 +1,9 @@
-import React from 'react'
+"use client";
+
+import TransactionsPage from "src/components/templates/TransactionsPage";
 
 function Transactions() {
-  return (
-    <div>
-      Transactions
-    </div>
-  )
+  return <TransactionsPage />
 }
 
-export default Transactions
+export default Transactions;

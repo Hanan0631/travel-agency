@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import QueryString from "qs";
 import { useEffect } from "react";
 import { Controller, useForm } from "react-hook-form";
-import DatePicker from "react-multi-date-picker";
+import DatePicker, { DateObject } from "react-multi-date-picker";
 import useQuery from "src/core/hooks/query";
 import persian from "react-date-object/calendars/persian";
 import persian_fa from "react-date-object/locales/persian_fa";
@@ -62,6 +62,7 @@ function Search() {
           render={({ field: { onChange } }) => (
             <DatePicker
               range
+              minDate={new DateObject({ calendar: persian }).set(Date.now())}
               dateSeparator=" تا "
               rangeHover
               calendar={persian}
