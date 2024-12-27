@@ -1,3 +1,4 @@
+//react-loader-spinner
 import { LineWave } from "react-loader-spinner";
 
 function Loader() {

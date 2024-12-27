@@ -1,7 +1,12 @@
+//react
 import { useState } from "react";
+
+//components
 import EditButton from "../atom/EditButton";
-import styles from "./AccountInfo.module.css";
 import EditBankAccountInfo from "./EditBankAccountInfo";
+
+//styles
+import styles from "./AccountInfo.module.css";
 
 function BankAccountInfo({ data }) {
   const [edit, setEdit] = useState(false);

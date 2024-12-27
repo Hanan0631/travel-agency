@@ -1,4 +1,5 @@
-import styles from "./ModalContainer.module.css"
+//styles
+import styles from "./ModalContainer.module.css";
 
 function ModalContainer({ children, modalIsOpen }) {
   if (!modalIsOpen) return;

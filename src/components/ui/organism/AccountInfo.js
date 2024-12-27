@@ -1,14 +1,27 @@
 "use client";
 
-import { e2p } from "@/utils/replaceNumber";
-import styles from "./AccountInfo.module.css";
-import EditButton from "../atom/EditButton";
+//react
 import { useState } from "react";
+
+//react-hot-toast
+import toast from "react-hot-toast";
+
+//react-hook-form
 import { useForm } from "react-hook-form";
+
+//yup
 import { yupResolver } from "@hookform/resolvers/yup";
+
+//components
+import EditButton from "../atom/EditButton";
+
+//core
+import { e2p } from "@/utils/replaceNumber";
 import { emailSchema } from "src/core/schema";
 import { useUpdateEmail } from "@/services/mutation";
-import toast from "react-hot-toast";
+
+//styles
+import styles from "./AccountInfo.module.css";
 
 function AccountInfo({ data }) {
   const [edit, setEdit] = useState(false);

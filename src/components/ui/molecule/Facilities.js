@@ -1,3 +1,4 @@
+//styles
 import styles from "./Facilities.module.css";
 
 function Facilities() {

@@ -1,9 +1,10 @@
 "use client";
 
+//components
 import TransactionsPage from "src/components/templates/TransactionsPage";
 
 function Transactions() {
-  return <TransactionsPage />
+  return <TransactionsPage />;
 }
 
 export default Transactions;

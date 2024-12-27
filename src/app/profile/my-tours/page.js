@@ -1,11 +1,12 @@
-import UserToursPage from "src/components/templates/UserToursPage"
+//components
+import UserToursPage from "src/components/templates/UserToursPage";
 
 function MyTours() {
   return (
     <div>
-     <UserToursPage />
+      <UserToursPage />
     </div>
-  )
+  );
 }
 
-export default MyTours
+export default MyTours;

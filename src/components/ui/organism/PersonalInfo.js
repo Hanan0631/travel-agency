@@ -5,9 +5,11 @@ import { useState } from "react";
 import EditButton from "../atom/EditButton";
 import EditPersonalInfo from "./EditPersonalInfo";
 
+//core
+import { e2p } from "@/utils/replaceNumber";
+
 //styles
 import styles from "./AccountInfo.module.css";
-import { e2p } from "@/utils/replaceNumber";
 
 function PersonalInfo({ data }) {
   const [edit, setEdit] = useState(false);

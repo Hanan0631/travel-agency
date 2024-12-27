@@ -1,14 +1,23 @@
 "use client";
 
-import { useGetBasket } from "@/services/queries";
-import styles from "./CheckoutPage.module.css";
+//next
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+
+//react-hot-toast
+import toast from "react-hot-toast";
+
+//components
 import PersonalInfo from "@/ui/organism/PersonalInfo";
+
+//core
+import { useGetBasket } from "@/services/queries";
 import { tripDuration } from "@/utils/tourInfo";
 import { sp } from "@/utils/replaceNumber";
 import { useCheckout } from "@/services/mutation";
-import toast from "react-hot-toast";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
+
+//styles
+import styles from "./CheckoutPage.module.css";
 
 function CheckoutPage({ userData }) {
   const { data, isPending } = useGetBasket();

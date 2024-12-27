@@ -1,5 +1,8 @@
+//core
 import { useGetTransactions } from "@/services/queries";
 import { e2p, sp } from "@/utils/replaceNumber";
+
+//styles
 import styles from "./TransactionsPage.module.css";
 
 function TransactionsPage() {

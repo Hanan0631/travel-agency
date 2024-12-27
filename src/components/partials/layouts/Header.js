@@ -55,9 +55,7 @@ function Header() {
       <div className={styles.header}>
         {navbarIsOpen && <Navbar reference={ref} />}
         <div className={styles.mobileContainer}>
-          <div
-            onClick={() => setNavbarIsOpen(true)}
-          >
+          <div onClick={() => setNavbarIsOpen(true)}>
             <MenuButton />
           </div>
           <div>

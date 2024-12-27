@@ -1,5 +1,7 @@
+//axios
 import axios from "axios";
 
+//core
 import { getCookie, setCookie } from "../utils/cookie";
 
 const api = axios.create({

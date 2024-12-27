@@ -1,10 +1,16 @@
 "use client"
 
-//
+//next
 import { useRouter } from "next/navigation";
-import { useGetUserProfile } from "@/services/queries";
-import Loader from "@/ui/atom/Loader";
+
+//react
 import { useEffect } from "react";
+
+//components
+import Loader from "@/ui/atom/Loader";
+
+//core
+import { useGetUserProfile } from "@/services/queries";
 
 function AuthProvider({children}) {
     const router = useRouter();

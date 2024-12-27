@@ -1,16 +1,23 @@
+//next
 import Image from "next/image";
-import styles from "./TourDetailsPage.module.css";
-import { sp } from "@/utils/replaceNumber";
+
+//components
 import Facilities from "@/ui/molecule/Facilities";
 import TransportationIcon from "@/ui/atom/TransportationIcon";
 import AvailableSeatsIcon from "@/ui/atom/AvailableSeatsIcon";
 import InsuranceIcon from "@/ui/atom/InsuranceIcon";
 import OriginIcon from "@/ui/atom/OriginIcon";
 import StartDateIcon from "@/ui/atom/StartDateIcon";
-import { getJalaliDate } from "@/utils/helper";
 import EndDateIcon from "@/ui/atom/EndDateIcon";
 import ReserveButton from "@/ui/atom/ReserveButton";
+
+//core
+import { sp } from "@/utils/replaceNumber";
+import { getJalaliDate } from "@/utils/helper";
 import { tripDuration } from "@/utils/tourInfo";
+
+//styles
+import styles from "./TourDetailsPage.module.css";
 
 function TourDetailsPage({ tourData }) {
   if (!tourData) return <p>اطلاعاتی برای این تور یافت نشد.</p>;

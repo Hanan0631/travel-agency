@@ -1,9 +1,12 @@
 "use client";
 
-import { useGetUserProfile } from "@/services/queries";
+//components
 import AccountInfo from "@/ui/organism/AccountInfo";
 import PersonalInfo from "@/ui/organism/PersonalInfo";
 import BankAccountInfo from "@/ui/organism/BankAccountInfo";
+
+//core
+import { useGetUserProfile } from "@/services/queries";
 
 function ProfilePage() {
   const { data } = useGetUserProfile();
@@ -12,7 +15,7 @@ function ProfilePage() {
     <div>
       <AccountInfo data={data} />
       <PersonalInfo data={data} />
-      <BankAccountInfo data={data}/>
+      <BankAccountInfo data={data} />
     </div>
   );
 }

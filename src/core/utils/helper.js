@@ -1,3 +1,4 @@
+//core
 import { p2e } from "./replaceNumber";
 
 const flattenObject = (obj, delimiter = ".", prefix = "") => {

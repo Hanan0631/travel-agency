@@ -1,9 +1,12 @@
 "use client";
 
+//react
+import { useState } from "react";
+
+//components
 import ModalContainer from "@/partials/container/ModalContainer";
 import CheckOTPForm from "@/ui/organism/CheckOTPForm";
 import SendOTPForm from "@/ui/organism/SendOTPForm";
-import { useState } from "react";
 
 function Authentication({ modalIsOpen, setModalIsOpen, reference }) {
   const [step, setStep] = useState(1);

@@ -1,6 +1,9 @@
+//core
 import { calculateSpentTime, getJalaliDate } from "@/utils/helper";
-import styles from "./UserTourCard.module.css";
 import { e2p, sp } from "@/utils/replaceNumber";
+
+//styles
+import styles from "./UserTourCard.module.css";
 
 function UserTourCard({ tourData }) {
   console.log(tourData);

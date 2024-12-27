@@ -1,9 +1,18 @@
-import { useUpdatePersonalInfo } from "@/services/mutation";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { useForm } from "react-hook-form";
-import { bankAccountSchema } from "src/core/schema";
-import styles from "./EditInfo.module.css";
+//react-hot-toast
 import toast from "react-hot-toast";
+
+//react-hook-form
+import { useForm } from "react-hook-form";
+
+//yup
+import { yupResolver } from "@hookform/resolvers/yup";
+
+//core
+import { useUpdatePersonalInfo } from "@/services/mutation";
+import { bankAccountSchema } from "src/core/schema";
+
+//styles
+import styles from "./EditInfo.module.css";
 
 function EditBankAccountInfo({ setEdit, prevData }) {
   const { mutate, isPending } = useUpdatePersonalInfo();

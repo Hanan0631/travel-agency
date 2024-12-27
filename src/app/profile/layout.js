@@ -1,36 +1,53 @@
-"use client"
+"use client";
 
+//next
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+
+//components
 import AuthProvider from "@/partials/provider/AuthProvider";
 import MyProfile from "@/ui/atom/MyProfile";
 import MyTours from "@/ui/atom/MyTours";
 import Transactions from "@/ui/atom/Transactions";
-import Link from "next/link";
+
+//styles
 import styles from "./layout.module.css";
-import { usePathname } from "next/navigation";
 
 function ProfileLayout({ children }) {
-    const pathname = usePathname()
+  const pathname = usePathname();
   return (
     <AuthProvider>
       <div className={styles.layoutContainer}>
         <ul>
           <li className={pathname === "/profile" ? styles.active : ""}>
-            <Link href="/profile" >
-              <MyProfile color={pathname === "/profile" ? "#28a745" : "#282828"}/>
+            <Link href="/profile">
+              <MyProfile
+                color={pathname === "/profile" ? "#28a745" : "#282828"}
+              />
               پروفایل من
             </Link>
           </li>
           <div className={styles.border}></div>
-          <li  className={pathname === "/profile/my-tours" ? styles.active : ""}>
+          <li className={pathname === "/profile/my-tours" ? styles.active : ""}>
             <Link href="/profile/my-tours">
-              <MyTours color={pathname === "/profile/my-tours" ? "#28a745" : "#282828"} />
+              <MyTours
+                color={pathname === "/profile/my-tours" ? "#28a745" : "#282828"}
+              />
               تور های من
             </Link>
           </li>
           <div className={styles.border}></div>
-          <li className={pathname === "/profile/transactions" ? styles.active : ""}>
+          <li
+            className={
+              pathname === "/profile/transactions" ? styles.active : ""
+            }
+          >
             <Link href="/profile/transactions">
-              <Transactions color={pathname === "/profile/transactions" ? "#28a745" : "#282828"}/>
+              <Transactions
+                color={
+                  pathname === "/profile/transactions" ? "#28a745" : "#282828"
+                }
+              />
               تراکنش ها
             </Link>
           </li>

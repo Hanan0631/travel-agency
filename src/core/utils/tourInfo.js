@@ -1,3 +1,4 @@
+//core
 import { e2p } from "./replaceNumber";
 
 const getMonth = (day) => {

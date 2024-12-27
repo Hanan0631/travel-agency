@@ -1,8 +1,17 @@
-import styles from "./PhoneShopping.module.css";
+//next
 import Image from "next/image";
+
+//public
 import cartoonMan from "@/public/images/cartoon-man.png";
-import { e2p } from "@/utils/replaceNumber";
+
+//components
 import CallIcon from "../atom/CallIcon";
+
+//core
+import { e2p } from "@/utils/replaceNumber";
+
+//styles
+import styles from "./PhoneShopping.module.css";
 
 function PhoneShopping() {
   return (

@@ -1,16 +1,29 @@
 "use client";
 
-import { useGetTour } from "@/services/queries";
+//next
 import { useRouter } from "next/navigation";
-import QueryString from "qs";
+
+//react
 import { useEffect } from "react";
+
+//react-hook-form
 import { Controller, useForm } from "react-hook-form";
+
+//react-multi-date-picker
 import DatePicker, { DateObject } from "react-multi-date-picker";
-import useQuery from "src/core/hooks/query";
 import persian from "react-date-object/calendars/persian";
 import persian_fa from "react-date-object/locales/persian_fa";
 import "react-multi-date-picker/styles/colors/green.css";
+
+//qs
+import QueryString from "qs";
+
+//core
 import { destinations, flattenObject, origins } from "@/utils/helper";
+import { useGetTour } from "@/services/queries";
+import useQuery from "src/core/hooks/query";
+
+//styles
 import styles from "./Search.module.css";
 
 function Search() {

@@ -1,5 +1,8 @@
-import api from "@/config/api";
+//tanstack
 import { useQuery } from "@tanstack/react-query";
+
+//core
+import api from "@/config/api";
 
 const useGetUserProfile = () => {
   const queryKey = ["profile"];

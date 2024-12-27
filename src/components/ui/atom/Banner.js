@@ -1,4 +1,7 @@
+//next
 import Image from "next/image";
+
+//public
 import banner from "@/public/images/banner.png";
 
 function Banner() {

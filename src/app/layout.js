@@ -1,13 +1,15 @@
+//react-hot-toast
+import { Toaster } from "react-hot-toast";
+
 //components
 import Layout from "@/partials/layouts/Layout";
+import TanstackQueryProvider from "@/partials/provider/TanstackQueryProvider";
 
 //core
 import { yekan } from "@/utils/fonts";
 
 //styles
 import "./globals.css";
-import TanstackQueryProvider from "@/partials/provider/TanstackQueryProvider";
-import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   title: "آژانس مسافرتی | تورینو",

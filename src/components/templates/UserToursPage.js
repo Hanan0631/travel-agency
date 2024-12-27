@@ -1,8 +1,13 @@
 "use client";
 
-import { useGetUserTours } from "@/services/queries";
-import styles from "./UserTourPage.module.css";
+//components
 import UserTourCard from "@/ui/organism/UserTourCard";
+
+//core
+import { useGetUserTours } from "@/services/queries";
+
+//styles
+import styles from "./UserTourPage.module.css";
 
 function UserToursPage() {
   const { data, isPending } = useGetUserTours();

@@ -1,16 +1,26 @@
 "use client";
 
-import { useUpdatePersonalInfo } from "@/services/mutation";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { Controller, useForm } from "react-hook-form";
+//react-hot-toast
 import toast from "react-hot-toast";
-import { personalInfoSchema } from "src/core/schema";
+
+//react-hook-form
+import { Controller, useForm } from "react-hook-form";
+
+//react-multi-date-picker
 import persian from "react-date-object/calendars/persian";
 import persian_fa from "react-date-object/locales/persian_fa";
-import styles from "./EditInfo.module.css";
-
-import "react-multi-date-picker/styles/colors/green.css";
 import DatePicker, { DateObject } from "react-multi-date-picker";
+import "react-multi-date-picker/styles/colors/green.css";
+
+//yup
+import { yupResolver } from "@hookform/resolvers/yup";
+
+//core
+import { useUpdatePersonalInfo } from "@/services/mutation";
+import { personalInfoSchema } from "src/core/schema";
+
+//styles
+import styles from "./EditInfo.module.css";
 
 function EditPersonalInfo({ setEdit, prevData }) {
   const { mutate, isPending } = useUpdatePersonalInfo();

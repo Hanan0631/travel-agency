@@ -1,5 +1,8 @@
 "use client";
 
+//react
+import { useState } from "react";
+
 //react-input-otp
 import OtpInput from "react18-input-otp";
 
@@ -8,9 +11,6 @@ import toast from "react-hot-toast";
 
 //react-count-down
 import Countdown from "react-countdown";
-
-//react
-import { useState } from "react";
 
 //components
 import BackButton from "../atom/BackButton";
