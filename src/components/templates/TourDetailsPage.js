@@ -1,6 +1,9 @@
+"use client"
+
 //next
 import Image from "next/image";
 
+import { useState } from "react";
 //components
 import Facilities from "@/ui/molecule/Facilities";
 import TransportationIcon from "@/ui/atom/TransportationIcon";
@@ -18,8 +21,11 @@ import { tripDuration } from "@/utils/tourInfo";
 
 //styles
 import styles from "./TourDetailsPage.module.css";
+import Authentication from "./Authentication";
 
 function TourDetailsPage({ tourData }) {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
   if (!tourData) return <p>اطلاعاتی برای این تور یافت نشد.</p>;
   return (
     <div className={styles.container}>
@@ -65,7 +71,7 @@ function TourDetailsPage({ tourData }) {
               </div>
             </div>
             <div className={styles.buy}>
-              <ReserveButton id={tourData.id} />
+              <ReserveButton id={tourData.id} modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen} />
               <p>
                 {sp(tourData.price)}
                 <span>تومان</span>
@@ -122,6 +128,7 @@ function TourDetailsPage({ tourData }) {
           </div>
         </div>
       </div>
+      
     </div>
   );
 }
