@@ -56,3 +56,23 @@ npm install
 npm run dev
 # http://localhost:3000
 ```
+---
+### Related Links
+- Backend repo link : https://github.com/Hanan0631/travel-agency-api
+
+1.  Download or clone the repository
+
+```bash
+git clone https://github.com/Hanan0631/travel-agency-api.git
+```
+2.  Install dependencies
+
+```bash
+npm install
+```
+
+3.  start the local server
+
+```bash
+npm start
+```
