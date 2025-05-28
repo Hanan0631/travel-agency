@@ -36,10 +36,12 @@
   border: none;
 }
 
-.form .datePicker input:hover,
+/* .form .datePicker input:hover,
 .form .datePicker input:focus,
 select:hover,
-select:focus {
+select:focus  */
+.select:hover,
+.select:focus{
   outline: none;
 }
 

@@ -51,7 +51,7 @@ function Search() {
   return (
     <form onSubmit={handleSubmit(submitHandler)} className={styles.form}>
       <div className={styles.selectContainer}>
-        <select {...register("originId")}>
+        <select {...register("originId")} className={styles.select}>
           <option value="">مبدا</option>
           {origins(data).map((item) => (
             <option key={item.id} value={item.id}>
@@ -59,7 +59,7 @@ function Search() {
             </option>
           ))}
         </select>
-        <select {...register("destinationId")}>
+        <select {...register("destinationId")} className={styles.select}>
           <option value="">مقصد</option>
           {destinations(data).map((item) => (
             <option key={item.id} value={item.id}>
@@ -94,7 +94,7 @@ function Search() {
           )}
         />
       </div>
-      <input type="submit" value="جستجو" className="جستجو" />
+      <input type="submit" value="جستجو" className={`جستجو ${styles.select}`}  />
     </form>
   );
 }
